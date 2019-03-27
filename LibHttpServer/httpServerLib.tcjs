@@ -1,0 +1,26 @@
+let tc = TCF.define(TCF.CPP_TRANSFORM);
+let topTC = TCF.getRootTransformationConfiguration();
+let pocoLoc =  'C:\\RT_Course\\poco';
+tc.sources = [
+    'platform:/resource/LibHttpServer/LibHttpServer.emx#_rx2SkNXDEei3BJT-OqdJZA'
+];
+tc.createTargetProject = true;
+tc.targetProject = '/LibHttpServer_target';
+tc.type = CppTransformType.Library;
+
+tc.compileArguments = topTC.compileArguments || '$(DEBUG_TAG) -fexceptions';
+tc.inclusionPaths = [
+    pocoLoc + '\\Net\\include',
+    pocoLoc + '\\Foundation\\include'
+];
+
+
+tc.unitName = 'UnitName_HttpLib';
+tc.copyrightText = `
+/*******************************************************************************
+ * (c) Copyright HCL Technologies Ltd. 2019.  MIT Licensed!
+ *******************************************************************************/
+`;
+tc.libraryName = 'httpServerLib$(LIB_EXT)';
+tc.targetConfiguration = 'WinT.x64-MinGw-8.1.0';
+tc.compilationMakeType = MakeType.GNU_make;
