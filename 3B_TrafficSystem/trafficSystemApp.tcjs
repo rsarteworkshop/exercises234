@@ -1,0 +1,10 @@
+let tc = TCF.define(TCF.CPP_TRANSFORM);
+tc.sources = [
+    'platform:/resource/TrafficSystem/TrafficSystem.emx#_D3uHEJ00EfGhD7BLCbP21w',
+    'platform:/resource/TrafficLightComponent/TrafficLightComponent.emx#_OH9xoJyhEfGhD7BLCbP21w',
+];
+tc.compilationMakeType = MakeType.MS_nmake;
+tc.createTargetProject = true;
+tc.targetConfiguration = 'WinT.x86-VisualC++-17.0';
+tc.targetProject = 'TrafficSystem_target';
+tc.topCapsule = 'platform:/resource/TrafficSystem/TrafficSystem.emx#_3fCSIJ0-EfGhD7BLCbP21w';
