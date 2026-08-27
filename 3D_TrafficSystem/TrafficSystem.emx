@@ -439,8 +439,8 @@
                 <entry xmi:type="uml:OpaqueBehavior" xmi:id="_-Ij0wJ1HEfGhD7BLCbP21w" name="Entry">
                   <language><![CDATA[C++]]></language>
                   <body><![CDATA[currentTimer = timing.informIn(RTTimespec(2,0));
-north.red().send();
-south.red().send();
+sendOnBound(north.red());
+sendOnBound(south.red());
 east.yellow().send();
 west.yellow().send();]]></body>
                 </entry>
@@ -449,8 +449,8 @@ west.yellow().send();]]></body>
                 <entry xmi:type="uml:OpaqueBehavior" xmi:id="_6jxfYJ1HEfGhD7BLCbP21w" name="Entry">
                   <language><![CDATA[C++]]></language>
                   <body><![CDATA[currentTimer = timing.informIn(RTTimespec(10,0));
-north.red().send();
-south.red().send();
+sendOnBound(north.red());
+sendOnBound(south.red());
 east.green().send();
 west.green().send();]]></body>
                 </entry>
@@ -459,8 +459,8 @@ west.green().send();]]></body>
                 <entry xmi:type="uml:OpaqueBehavior" xmi:id="_mqdLkJ1HEfGhD7BLCbP21w" name="Entry">
                   <language><![CDATA[C++]]></language>
                   <body><![CDATA[currentTimer = timing.informIn(RTTimespec(10,0));
-north.green().send();
-south.green().send();
+sendOnBound(north.green());
+sendOnBound(south.green());
 east.red().send();
 west.red().send();]]></body>
                 </entry>
@@ -469,8 +469,8 @@ west.red().send();]]></body>
                 <entry xmi:type="uml:OpaqueBehavior" xmi:id="_1wCDkJ1HEfGhD7BLCbP21w" name="Entry">
                   <language><![CDATA[C++]]></language>
                   <body><![CDATA[currentTimer = timing.informIn(RTTimespec(2,0));
-north.yellow().send();
-south.yellow().send();
+sendOnBound(north.yellow());
+sendOnBound(south.yellow());
 east.red().send();
 west.red().send();]]></body>
                 </entry>
@@ -567,12 +567,22 @@ west.off().send();]]></body>
         <language><![CDATA[C++]]></language>
         <body><![CDATA[this->nsLaneCount = nsLaneCount;]]></body>
       </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_FH7x8KI7EfGEWKefdq_tfQ" name="sendOnBound" specification="__Mj_sKI6EfGEWKefdq_tfQ">
+        <language><![CDATA[C++]]></language>
+        <body><![CDATA[for (int i = 0; i < nsLaneCount; i++) {
+    out.sendAt(i);
+}
+]]></body>
+      </ownedBehavior>
       <ownedOperation xmi:id="_IJnB0J7bEfGhD7BLCbP21w" name="Controller" method="_74aggJ7bEfGhD7BLCbP21w">
         <ownedParameter xmi:id="_IJpeEJ7bEfGhD7BLCbP21w" name="rtg_rts"/>
         <ownedParameter xmi:id="_IJrTQJ7bEfGhD7BLCbP21w" name="rtg_ref"/>
         <ownedParameter xmi:id="_cyE6oJ7bEfGhD7BLCbP21w" name="nsLaneCount">
           <type xmi:type="uml:PrimitiveType" href="platform:/plugin/com.ibm.xtools.umldt.rt.cpp.core/libraries/CppPrimitiveDatatypes.emx#_f0876hKyEdyaM9S2zG4bgA?CppPrimitiveDatatypes/int?"/>
         </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="__Mj_sKI6EfGEWKefdq_tfQ" name="sendOnBound" visibility="protected" method="_FH7x8KI7EfGEWKefdq_tfQ">
+        <ownedParameter xmi:id="_A51Z0KI7EfGEWKefdq_tfQ" name="out"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_3fCSIJ0-EfGhD7BLCbP21w" name="Intersection" clientDependency="_rjfEAZ7cEfGhD7BLCbP21w">
@@ -1037,9 +1047,11 @@ RTActorId id = frame.incarnateCustom(controller,
 		return new Controller_Actor(c, a, nsLaneCount);
 	})
 );
+if (!id.isValid()) {
+	context()->perror(context()->strerror());
+}
 
 incarnateNorthSouth();
-
 ]]></body>
             </effect>
             <trigger xmi:id="_wpURMJ7jEfGhD7BLCbP21w" name="" event="_eerXoJ7hEfGhD7BLCbP21w" port="_dF3VIJ7iEfGhD7BLCbP21w"/>
@@ -1214,4 +1226,5 @@ for (int i = 0; i < nsLaneCount; i++) {
   <UMLRealTime:RTPort xmi:id="_fC3MEJ-MEfGhD7BLCbP21w" base_Port="_fC198J-MEfGhD7BLCbP21w"/>
   <UMLRealTime:RTPort xmi:id="_0n_hcJ-MEfGhD7BLCbP21w" isConjugate="true" base_Port="_0n9sQJ-MEfGhD7BLCbP21w"/>
   <UMLRealTime:RTConnector xmi:id="_6ifJ8J-MEfGhD7BLCbP21w" base_Connector="_6id70J-MEfGhD7BLCbP21w"/>
+  <CppPropertySets:GeneralParameterProperties xmi:id="_DYDIsKI7EfGEWKefdq_tfQ" base_Parameter="_A51Z0KI7EfGEWKefdq_tfQ" nativeType="RTOutSignal&amp;"/>
 </xmi:XMI>
