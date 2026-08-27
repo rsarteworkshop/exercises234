@@ -12,25 +12,48 @@
         <link type="text/css" rel="stylesheet" href="/css" />
     </head>
 
-    <body>            
-              
-        <h3 id="light-label">Light: N/A</h3>        
+    <body>
 
-        <button type="button" id="ped_button">Pedestrian Wants to Cross</button>
+        <button type="button" id="close_ew_button">Close East/West Lane</button>
+        <button type="button" id="open_ew_button">Open East/West Lane</button>
 
-        <div id="traffic">
-            <svg>
-               <g stroke="black" fill="#333">
-                  <path d="m10 10 l 0 510 l 200 0 l 0 -510 z"></path>
-                  <path fill="#444" d="m20 20 l 0 490 l 180 0 l 0 -490 z"></path>
-                  <circle cx="110" cy="100" r="75" id="rl"></circle>
-                  <circle cx="110" cy="260" r="75" id="yl"></circle>
-                  <circle cx="110" cy="420" r="75" id="gl"></circle>
-               </g>
-            </svg>            
-         </div>
-         <img id="pedSignal" src="/images/stop"/>
-         <p id="pedCounter"></p>
+        <div id="intersection-layout">
+            <div class="light-panel" id="north-light-panel">
+                <h3 id="ns-light-label">North/South: N/A</h3>
+                <div class="traffic-light">
+                    <svg>
+                       <g stroke="black" fill="#333">
+                          <path d="m10 10 l 0 510 l 200 0 l 0 -510 z"></path>
+                          <path fill="#444" d="m20 20 l 0 490 l 180 0 l 0 -490 z"></path>
+                          <circle cx="110" cy="100" r="75" id="rl"></circle>
+                          <circle cx="110" cy="260" r="75" id="yl"></circle>
+                          <circle cx="110" cy="420" r="75" id="gl"></circle>
+                       </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div id="intersection-panel">
+                <img id="pedSignal" src="/images/intersection"/>
+            </div>
+
+            <div class="light-panel" id="east-light-panel">
+                <h3 id="ew-light-label">East/West: N/A</h3>
+                <div class="traffic-light">
+                    <svg>
+                       <g stroke="black" fill="#333">
+                          <path d="m10 10 l 0 510 l 200 0 l 0 -510 z"></path>
+                          <path fill="#444" d="m20 20 l 0 490 l 180 0 l 0 -490 z"></path>
+                          <circle cx="110" cy="100" r="75" id="erl"></circle>
+                          <circle cx="110" cy="260" r="75" id="eyl"></circle>
+                          <circle cx="110" cy="420" r="75" id="egl"></circle>
+                       </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <p id="pedCounter"></p>
 
         <script src="/socket.io/socket.io.js"></script>
         <script src="/jquery"></script>        
@@ -46,16 +69,7 @@
                     newStylesheet.rel = 'stylesheet';
                     newStylesheet.href = './css/';
                     document.head.appendChild(newStylesheet);
-                }
-
-                const oldPedSignal = document.getElementById('pedSignal');
-                if (oldPedSignal) {
-                    oldPedSignal.remove();
-                }
-                const newPedSignal = document.createElement('img');
-                newPedSignal.id = 'pedSignal';
-                newPedSignal.src = './images/stop';
-                document.body.insertBefore(newPedSignal, document.querySelector('p#pedCounter'));
+                }                
 
 
                 document.querySelectorAll('script').forEach(script => {

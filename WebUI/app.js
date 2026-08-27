@@ -26,13 +26,9 @@ app.get('/css', function(req, res) {
     res.contentType("text/css");
     res.sendFile(__dirname + '/public/css/styling.css');
 });
-app.get('/images/stop', function(req, res) {
+app.get('/images/intersection', function(req, res) {
     res.contentType("img/png");
-    res.sendFile(__dirname + '/public/images/stop.png');
-});
-app.get('/images/walk', function(req, res) {
-    res.contentType("img/png");
-    res.sendFile(__dirname + '/public/images/walk.png');
+    res.sendFile(__dirname + '/public/images/intersection.png');
 });
 app.get('/main', function(req, res) {
     res.contentType("text/javascript");
@@ -66,19 +62,7 @@ function msgReceived(msg) {
                 console.warn('Invalid lightChanged payload:', msg.data);
             }
         }
-    }
-    else if (msg.port == "pedLightControl") {
-        // Message from pedestrian light
-        if (msg.event == "stop") {
-            io.emit('pedlight', {'light' : 'stop'});
-        }
-        else if (msg.event == "walk") {
-            io.emit('pedlight', {'light' : 'walk'});            
-        }
-        else if (msg.event == "timeRemaining") {
-            io.emit('pedcount', {'count' : msg.data.split(" ")[1]}); // Strip off data type and only keep the value
-        }
-    }
+    }    
 }
 
 const tcpServer = require('rt-tcp-utils')('localhost', 7001); // Send TCP requests to RT app on port 7001
@@ -90,8 +74,13 @@ tcpServer.startListenForEvents(7002) // Receive TCP requests from RT app on port
 });
 
 // Messages from web application to RT application 
-app.get('/ped_button', function(req, res) {
-    tcpServer.sendEvent('pedestrian', 'trafficLight');
+app.get('/close_ew_button', function(req, res) {
+    tcpServer.sendEvent('closeEWLane', 'trafficSystemControl');
+
+    res.end();
+});
+app.get('/open_ew_button', function(req, res) {
+    tcpServer.sendEvent('openEWLane', 'trafficSystemControl');
 
     res.end();
 });

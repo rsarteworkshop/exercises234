@@ -4,6 +4,7 @@ tc.sources = [
 ];
 tc.prerequisites = [
     'platform:/resource/TrafficLightComponent/trafficLightLib.tcjs',
+    'platform:/resource/LibTcpServer/tcpServerLib.tcjs',
 ];
 tc.compilationMakeType = MakeType.MS_nmake;
 tc.compileArguments = '$(DEBUG_TAG)';
@@ -32,6 +33,15 @@ tc.threads = [
     priority: 'DEFAULT_MAIN_PRIORITY',
     logical: [
         'ControllerThread',
+    ]
+},
+{
+    name: 'WebUIThread',
+    implClass: 'RTPeerController',
+    stackSize: '20000',
+    priority: 'DEFAULT_MAIN_PRIORITY',
+    logical: [
+        'WebUIThread',
     ]
 },
 ];

@@ -27,46 +27,67 @@ $(function () {
 
    
     socket.on('light', function(msg) {
-        $('#light-label').text("Light: " + msg.light);
-        $('#rl').css('fill', 'black');
-        $('#yl').css('fill', 'black');
-        $('#gl').css('fill', 'black');
-        if (msg.light == 'Red') {
-            $('#rl').css('fill', 'red');            
+        var lightName = (msg.name || '').toLowerCase();
+        var color = (msg.light || '').toLowerCase();
+
+        var labelSelector = '#ns-light-label';
+        var redSelector = '#rl';
+        var yellowSelector = '#yl';
+        var greenSelector = '#gl';
+        var labelPrefix = 'North/South';
+
+        if (lightName === 'east') {
+            labelSelector = '#ew-light-label';
+            redSelector = '#erl';
+            yellowSelector = '#eyl';
+            greenSelector = '#egl';
+            labelPrefix = 'East/West';
         }
-        else if (msg.light == 'Yellow') {
-            $('#yl').css('fill', 'yellow');
+        else if (lightName !== 'north') {
+            return;
         }
-        else if (msg.light == 'Green') {
-            $('#gl').css('fill', 'green');
+
+        $(labelSelector).text(labelPrefix + ': ' + (msg.light || 'N/A'));
+        $(redSelector).css('fill', 'black');
+        $(yellowSelector).css('fill', 'black');
+        $(greenSelector).css('fill', 'black');
+
+        if (color === 'off') {
+            // Keep all bulbs off (black)
+        }
+        else if (color === 'red') {
+            $(redSelector).css('fill', 'red');
+        }
+        else if (color === 'yellow') {
+            $(yellowSelector).css('fill', 'yellow');
+        }
+        else if (color === 'green') {
+            $(greenSelector).css('fill', 'green');
         }
     });
     
-    socket.on('pedlight', function(msg) {
 
+    $('#close_ew_button').unbind('click').bind('click', function (e) {
         if(isBrowser){
-            $('#pedSignal').attr('src', './images/' + msg.light);
-        }else{
-            $('#pedSignal').attr('src', '/images/' + msg.light);
-        }
-        
-    });
-
-    socket.on('pedcount', function(msg) {
-        $('#pedCounter').text(msg.count);
-        if (msg.count == '0') {
-            setTimeout(() => {$('#pedCounter').text('');}, 1000);
-        }
-    });
-
-    $('#ped_button').unbind('click').bind('click', function (e) {
-        if(isBrowser){
-            $.get('./ped_button', function () {
+            $.get('./close_ew_button', function () {
 
             });
         }
         else{
-            $.get('/ped_button', function () {
+            $.get('/close_ew_button', function () {
+
+            });
+        }
+        
+    });
+    $('#open_ew_button').unbind('click').bind('click', function (e) {
+        if(isBrowser){
+            $.get('./open_ew_button', function () {
+
+            });
+        }
+        else{
+            $.get('/open_ew_button', function () {
 
             });
         }

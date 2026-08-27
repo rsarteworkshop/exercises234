@@ -2,15 +2,41 @@
 * (c) Copyright HCL Technologies Ltd. 2018.  MIT Licensed!
 ************************************************************************/
 
-svg{
+#intersection-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.light-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.traffic-light svg {
   background: #999;
   color: white;
-  float: left;
   margin: 5px;
   height: 530px;
   width: 220px;
   border: 1px solid black;
 }
+#intersection-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pedSignal {
+  max-width: 360px;
+  width: 40vw;
+  min-width: 220px;
+  height: auto;
+}
+
 .button{
    background: #444;
   padding: 20px;
@@ -33,4 +59,11 @@ circle{
 }
 #pedCounter {
   font-size: 36px;
+}
+
+@media (max-width: 900px) {
+  #pedSignal {
+    width: 70vw;
+    min-width: 180px;
+  }
 }
