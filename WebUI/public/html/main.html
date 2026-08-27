@@ -1,0 +1,99 @@
+﻿<!doctype html>
+
+<!-------------------------------------------------------------------- 
+    (c) Copyright HCL Technologies Ltd. 2018.  MIT Licensed!
+------------------------------------------------------------------- -->
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Traffic Light</title>
+
+        <link type="text/css" rel="stylesheet" href="/css" />
+    </head>
+
+    <body>            
+              
+        <h3 id="light-label">Light: N/A</h3>        
+
+        <button type="button" id="ped_button">Pedestrian Wants to Cross</button>
+
+        <div id="traffic">
+            <svg>
+               <g stroke="black" fill="#333">
+                  <path d="m10 10 l 0 510 l 200 0 l 0 -510 z"></path>
+                  <path fill="#444" d="m20 20 l 0 490 l 180 0 l 0 -490 z"></path>
+                  <circle cx="110" cy="100" r="75" id="rl"></circle>
+                  <circle cx="110" cy="260" r="75" id="yl"></circle>
+                  <circle cx="110" cy="420" r="75" id="gl"></circle>
+               </g>
+            </svg>            
+         </div>
+         <img id="pedSignal" src="/images/stop"/>
+         <p id="pedCounter"></p>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/jquery"></script>        
+        <script src="/main"></script>
+
+        <script>
+                const existingStylesheet = document.querySelector('link[rel="stylesheet"]');
+                if (existingStylesheet) {
+                    existingStylesheet.href = './css/';
+                } else {    
+                    const newStylesheet = document.createElement('link');
+                    newStylesheet.type = 'text/css';
+                    newStylesheet.rel = 'stylesheet';
+                    newStylesheet.href = './css/';
+                    document.head.appendChild(newStylesheet);
+                }
+
+                const oldPedSignal = document.getElementById('pedSignal');
+                if (oldPedSignal) {
+                    oldPedSignal.remove();
+                }
+                const newPedSignal = document.createElement('img');
+                newPedSignal.id = 'pedSignal';
+                newPedSignal.src = './images/stop';
+                document.body.insertBefore(newPedSignal, document.querySelector('p#pedCounter'));
+
+
+                document.querySelectorAll('script').forEach(script => {
+                    if (script.src.includes('/socket.io/socket.io.js') || 
+                        script.src.includes('/jquery') || 
+                        script.src.includes('/main')) {
+                        script.remove();
+                    }
+                });
+
+                const scripts = [
+                    './socket.io/socket.io.js',
+                    './jquery',
+                    './main'
+                ];
+                async function loadScript(src) {
+                    return new Promise((resolve, reject) => {
+                        const script = document.createElement('script');
+                        script.src = src;
+                        script.onload = () => resolve();
+                        script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
+                        document.body.appendChild(script);
+                    });
+                }
+
+                (async () => {
+                    try {
+                        await loadScript('./socket.io/socket.io.js');
+                        await loadScript('./jquery');
+                        await loadScript('./main');
+                    } catch (error) {
+                        console.error(error);
+                    }
+                })();
+
+            
+
+        </script>
+
+    </body>
+</html>
