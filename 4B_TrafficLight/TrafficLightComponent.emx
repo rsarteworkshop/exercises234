@@ -233,6 +233,7 @@
             <entry xmi:type="uml:OpaqueBehavior" xmi:id="_r2OfIJ-zEfGhD7BLCbP21w" name="Entry">
               <language><![CDATA[C++]]></language>
               <body><![CDATA[Log::out << "Traffic light " << getName() << "[" << getIndex() << "] is turned off! " << Log::endl;
+
 LightChangeData data;
 data.name = getName();
 data.index = getIndex();
@@ -555,7 +556,7 @@ lightChange.lightChanged(data).send();]]></body>
           <transition xmi:id="_mhVooJ-0EfGhD7BLCbP21w" name="green" source="_KmBAUJ9_EfGhD7BLCbP21w" target="_mhRXMJ-0EfGhD7BLCbP21w">
             <trigger xmi:id="_pu37oJ-0EfGhD7BLCbP21w" name="" event="_Ci4CwJ0uEfGhD7BLCbP21w" port="_H5RqQJ0vEfGhD7BLCbP21w"/>
           </transition>
-          <transition xmi:id="__86o8KIWEfGhD7BLCbP21w" name="t1" source="_4xRhoKIWEfGhD7BLCbP21w" target="_x7nts59_EfGhD7BLCbP21w">
+          <transition xmi:id="__86o8KIWEfGhD7BLCbP21w" name="bound" source="_4xRhoKIWEfGhD7BLCbP21w" target="_x7nts59_EfGhD7BLCbP21w">
             <trigger xmi:id="_CUj1wKIXEfGhD7BLCbP21w" name="" port="_5j6RwKIREfGhD7BLCbP21w">
               <event xmi:type="uml:CallEvent" href="platform:/plugin/com.ibm.xtools.uml.rt.core/libraries/RTCoreLibrary.emx#_12gAYPjoEdu7jJXJnCojKg?RTCoreLibrary/rtBound?"/>
             </trigger>

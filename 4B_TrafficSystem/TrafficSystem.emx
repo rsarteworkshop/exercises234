@@ -45,7 +45,7 @@
             <styles xmi:type="notation:SortingStyle" xmi:id="_uPflDZ7hEfGhD7BLCbP21w"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_uPflDp7hEfGhD7BLCbP21w"/>
           </children>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uPe98Z7hEfGhD7BLCbP21w" x="23141" y="9510"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uPe98Z7hEfGhD7BLCbP21w" x="26311" y="9510"/>
         </children>
         <children xmi:type="umlnotation:UMLShape" xmi:id="_kfL_IJ--EfGhD7BLCbP21w" element="_kfEqYJ--EfGhD7BLCbP21w" fontName="Segoe UI" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
           <children xmi:type="notation:DecorationNode" xmi:id="_kfL_Ip--EfGhD7BLCbP21w" type="ImageCompartment">
@@ -111,12 +111,12 @@
           <children xmi:type="notation:BasicDecorationNode" xmi:id="_EUmpoqIREfGhD7BLCbP21w" type="Stereotype"/>
           <children xmi:type="notation:BasicDecorationNode" xmi:id="_EUmpo6IREfGhD7BLCbP21w" type="Name"/>
           <children xmi:type="notation:BasicDecorationNode" xmi:id="_EUmppKIREfGhD7BLCbP21w" type="Parent"/>
-          <children xmi:type="notation:SemanticListCompartment" xmi:id="_EUmppaIREfGhD7BLCbP21w" type="AttributeCompartment"/>
-          <children xmi:type="notation:SemanticListCompartment" xmi:id="_EUnQsKIREfGhD7BLCbP21w" type="OperationCompartment"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_EUmppaIREfGhD7BLCbP21w" type="AttributeCompartment" collapsed="true"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_EUnQsKIREfGhD7BLCbP21w" type="OperationCompartment" collapsed="true"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_EUnQsaIREfGhD7BLCbP21w" visible="false" type="SignalCompartment"/>
           <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_EUnQsqIREfGhD7BLCbP21w" visible="false" type="StructureCompartment"/>
           <children xmi:id="_EUnQs6IREfGhD7BLCbP21w" type="portCompartment">
-            <styles xmi:type="notation:DrawerStyle" xmi:id="_EUnQtKIREfGhD7BLCbP21w"/>
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_EUnQtKIREfGhD7BLCbP21w" collapsed="true"/>
             <styles xmi:type="notation:TitleStyle" xmi:id="_EUnQtaIREfGhD7BLCbP21w"/>
             <styles xmi:type="notation:SortingStyle" xmi:id="_EUnQtqIREfGhD7BLCbP21w"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_EUnQt6IREfGhD7BLCbP21w"/>
@@ -132,16 +132,16 @@
           <children xmi:type="notation:BasicDecorationNode" xmi:id="_FQpbI6IREfGhD7BLCbP21w" type="Name"/>
           <children xmi:type="notation:BasicDecorationNode" xmi:id="_FQpbJKIREfGhD7BLCbP21w" type="Parent"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_FQpbJaIREfGhD7BLCbP21w" type="AttributeCompartment"/>
-          <children xmi:type="notation:SemanticListCompartment" xmi:id="_FQpbJqIREfGhD7BLCbP21w" type="OperationCompartment"/>
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_FQpbJqIREfGhD7BLCbP21w" type="OperationCompartment" collapsed="true"/>
           <children xmi:type="notation:SemanticListCompartment" xmi:id="_FQqCMKIREfGhD7BLCbP21w" visible="false" type="SignalCompartment"/>
           <children xmi:type="umlnotation:UMLShapeCompartment" xmi:id="_FQqCMaIREfGhD7BLCbP21w" visible="false" type="StructureCompartment"/>
           <children xmi:id="_FQqCMqIREfGhD7BLCbP21w" type="portCompartment">
-            <styles xmi:type="notation:DrawerStyle" xmi:id="_FQqCM6IREfGhD7BLCbP21w"/>
+            <styles xmi:type="notation:DrawerStyle" xmi:id="_FQqCM6IREfGhD7BLCbP21w" collapsed="true"/>
             <styles xmi:type="notation:TitleStyle" xmi:id="_FQqCNKIREfGhD7BLCbP21w"/>
             <styles xmi:type="notation:SortingStyle" xmi:id="_FQqCNaIREfGhD7BLCbP21w"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_FQqCNqIREfGhD7BLCbP21w"/>
           </children>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FQo0EaIREfGhD7BLCbP21w" x="18309" y="8202"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FQo0EaIREfGhD7BLCbP21w" x="17435" y="4121"/>
         </children>
         <element xsi:nil="true"/>
         <edges xmi:type="umlnotation:UMLConnector" xmi:id="_zPJMcJ--EfGhD7BLCbP21w" element="_zBZrYJ--EfGhD7BLCbP21w" source="_kfL_IJ--EfGhD7BLCbP21w" target="_S5gNyZ1AEfGhD7BLCbP21w" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
@@ -1207,6 +1207,9 @@ RTActorId id = frame.incarnateCustom(controller,
 		return new Controller_Actor(c, a, nsLaneCount);
 	})
 );
+if (!id.isValid()) {
+	context()->perror(context()->strerror());
+}
 
 incarnateNorthSouth();
 
@@ -2307,9 +2310,8 @@ if (remotePort != 0)
 	config.remotePort = remotePort;
 else
 	config.remotePort = 7002; // Overridden default
-if (!remoteHost.empty()) {
-	config.remoteHost = remoteHost;                
-}
+if (!remoteHost.empty())
+	config.remoteHost = remoteHost;
 
 //config.logToStdOut = false;       
 Log::out << "Web UI TCP Server started!" << std::endl;
@@ -2428,7 +2430,9 @@ Log::out << "port=" << config.port << " remotePort=" << config.remotePort << " r
       <body><![CDATA[CmdLineArgs parseCommandLine();]]></body>
     </Header>
     <Implementation xmi:id="__FdvQaHkEfGhD7BLCbP21w">
-      <body><![CDATA[CmdLineArgs parseCommandLine() {
+      <body><![CDATA[#include <string>
+
+CmdLineArgs parseCommandLine() {
 	CmdLineArgs cmdLineArgs;
 
 	int ac = RTMain::argCount();
