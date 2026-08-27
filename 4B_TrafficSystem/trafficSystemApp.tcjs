@@ -1,0 +1,38 @@
+let tc = TCF.define(TCF.CPP_TRANSFORM);
+tc.sources = [
+    'platform:/resource/TrafficSystem/TrafficSystem.emx#_D3uHEJ00EfGhD7BLCbP21w',
+];
+tc.prerequisites = [
+    'platform:/resource/TrafficLightComponent/trafficLightLib.tcjs',
+];
+tc.compilationMakeType = MakeType.MS_nmake;
+tc.compileArguments = '$(DEBUG_TAG)';
+tc.createTargetProject = true;
+tc.linkArguments = '/DEBUG';
+tc.targetConfiguration = 'WinT.x86-VisualC++-17.0';
+tc.targetProject = 'TrafficSystem_target';
+tc.targetServicesLibrary = 'C:\\git\\rsarte-target-rts\\rsa_rt\\C++\\TargetRTS';
+tc.threads = [
+{
+    name: 'MainThread',
+    implClass: 'RTPeerController',
+    stackSize: '20000',
+    priority: 'DEFAULT_MAIN_PRIORITY'
+},
+{
+    name: 'TimerThread',
+    implClass: 'RTTimerController',
+    stackSize: '20000',
+    priority: 'DEFAULT_TIMER_PRIORITY'
+},
+{
+    name: 'ExtraThread',
+    implClass: 'RTPeerController',
+    stackSize: '20000',
+    priority: 'DEFAULT_MAIN_PRIORITY',
+    logical: [
+        'ControllerThread',
+    ]
+},
+];
+tc.topCapsule = 'platform:/resource/TrafficSystem/TrafficSystem.emx#_kfEqYJ--EfGhD7BLCbP21w';
