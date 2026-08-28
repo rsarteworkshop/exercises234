@@ -319,7 +319,7 @@
                 <children xmi:type="notation:BasicDecorationNode" xmi:id="_-kq6cp1yEfGhD7BLCbP21w" type="Stereotype"/>
                 <children xmi:type="notation:BasicDecorationNode" xmi:id="_-kq6c51yEfGhD7BLCbP21w" type="TransitionLabel"/>
                 <children xmi:type="notation:ListCompartment" xmi:id="_-kq6dJ1yEfGhD7BLCbP21w" type="Triggers"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-kq6cZ1yEfGhD7BLCbP21w" x="-702" y="-3988"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-kq6cZ1yEfGhD7BLCbP21w" x="-212" y="-1577"/>
               </children>
               <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-kqTYZ1yEfGhD7BLCbP21w" points="[0, 4, 11, -50]$[-10, 53, 1, -1]"/>
               <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-ksvoJ1yEfGhD7BLCbP21w" id="(0.5897035881435257,0.922844175491679)"/>
@@ -341,7 +341,7 @@
                 <children xmi:type="notation:BasicDecorationNode" xmi:id="_FVdfhJ14EfGhD7BLCbP21w" type="Stereotype"/>
                 <children xmi:type="notation:BasicDecorationNode" xmi:id="_FVdfhZ14EfGhD7BLCbP21w" type="TransitionLabel"/>
                 <children xmi:type="notation:ListCompartment" xmi:id="_FVdfhp14EfGhD7BLCbP21w" type="Triggers"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FVdfg514EfGhD7BLCbP21w" x="31" y="-4253"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FVdfg514EfGhD7BLCbP21w" x="31" y="-1528"/>
               </children>
               <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FVdfgZ14EfGhD7BLCbP21w" points="[-2, 13, 1, -52]$[-2, 56, 1, -9]"/>
               <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FVfUsJ14EfGhD7BLCbP21w" id="(0.5261261261261261,0.18683812405446293)"/>

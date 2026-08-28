@@ -1617,7 +1617,7 @@ incarnateNorthSouth();
                       <children xmi:type="notation:BasicDecorationNode" xmi:id="_fLEc4qA8EfGhD7BLCbP21w" type="Parent"/>
                       <children xmi:type="notation:ListCompartment" xmi:id="_fLEc46A8EfGhD7BLCbP21w" visible="false" type="Activities"/>
                       <children xmi:type="notation:ListCompartment" xmi:id="_fLEc5KA8EfGhD7BLCbP21w" visible="false" type="InternalTransitionCompartment"/>
-                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fLDOwaA8EfGhD7BLCbP21w" x="6665" y="1576"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fLDOwaA8EfGhD7BLCbP21w" x="6512" y="1505"/>
                     </children>
                   </children>
                   <children xmi:type="notation:ListCompartment" xmi:id="_7xqfVKA7EfGhD7BLCbP21w" type="InternalTransitionCompartment"/>
@@ -1687,8 +1687,8 @@ incarnateNorthSouth();
               <subvertex xmi:type="uml:State" xmi:id="_eAzCIKA8EfGhD7BLCbP21w" name="AllYellow">
                 <entry xmi:type="uml:OpaqueBehavior" xmi:id="_1EiDgKA8EfGhD7BLCbP21w" name="Entry">
                   <language><![CDATA[C++]]></language>
-                  <body><![CDATA[north.yellow().send();
-south.yellow().send();
+                  <body><![CDATA[sendOnBound(north.yellow());
+sendOnBound(south.yellow());
 east.yellow().send();
 west.yellow().send();]]></body>
                 </entry>
@@ -1696,8 +1696,8 @@ west.yellow().send();]]></body>
               <subvertex xmi:type="uml:State" xmi:id="_fLCnsKA8EfGhD7BLCbP21w" name="AllOff">
                 <entry xmi:type="uml:OpaqueBehavior" xmi:id="_3BLWYKA8EfGhD7BLCbP21w" name="Entry">
                   <language><![CDATA[C++]]></language>
-                  <body><![CDATA[north.off().send();
-south.off().send();
+                  <body><![CDATA[sendOnBound(north.off());
+sendOnBound(south.off());
 east.off().send();
 west.off().send();]]></body>
                 </entry>
