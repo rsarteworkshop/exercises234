@@ -2178,8 +2178,8 @@ incarnateNorthSouth();
               <subvertex xmi:type="uml:State" xmi:id="_eAzCIKA8EfGhD7BLCbP21w" name="AllYellow">
                 <entry xmi:type="uml:OpaqueBehavior" xmi:id="_1EiDgKA8EfGhD7BLCbP21w" name="Entry">
                   <language><![CDATA[C++]]></language>
-                  <body><![CDATA[north.yellow().send();
-south.yellow().send();
+                  <body><![CDATA[sendOnBound(north.yellow());
+sendOnBound(south.yellow());
 east.yellow().send();
 west.yellow().send();]]></body>
                 </entry>
@@ -2187,8 +2187,8 @@ west.yellow().send();]]></body>
               <subvertex xmi:type="uml:State" xmi:id="_fLCnsKA8EfGhD7BLCbP21w" name="AllOff">
                 <entry xmi:type="uml:OpaqueBehavior" xmi:id="_3BLWYKA8EfGhD7BLCbP21w" name="Entry">
                   <language><![CDATA[C++]]></language>
-                  <body><![CDATA[north.off().send();
-south.off().send();
+                  <body><![CDATA[sendOnBound(north.off());
+sendOnBound(south.off());
 east.off().send();
 west.off().send();]]></body>
                 </entry>
@@ -2302,16 +2302,11 @@ west.off().send();]]></body>
       </ownedBehavior>
       <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sXzYoKIYEfGhD7BLCbP21w" name="WebUI" specification="_VU7S4KIYEfGhD7BLCbP21w">
         <language><![CDATA[C++]]></language>
-        <body><![CDATA[if (port != 0)
-	config.port = port; 
-else
-	config.port = 7001; // Overridden default
-if (remotePort != 0)
-	config.remotePort = remotePort;
-else
-	config.remotePort = 7002; // Overridden default
+        <body><![CDATA[config.port = (port != 0) ? port : 7001; // Default port
+config.remotePort = (remotePort != 0) ? remotePort : 7002; // Default remote port
+
 if (!remoteHost.empty())
-	config.remoteHost = remoteHost;
+	config.remoteHost = remoteHost; // Default remote host is "127.0.0.1"
 
 //config.logToStdOut = false;       
 Log::out << "Web UI TCP Server started!" << std::endl;
@@ -2460,7 +2455,7 @@ CmdLineArgs parseCommandLine() {
   </CppPropertySets:GeneralArtifactProperties>
   <CppPropertySets:GeneralDependencyProperties xmi:id="_zBWnsKHlEfGhD7BLCbP21w" base_Dependency="_yhbxgKHlEfGhD7BLCbP21w" kindInHeader="inclusion" kindInImplementation="none"/>
   <CppPropertySets:GeneralDependencyProperties xmi:id="_IKzGoKHmEfGhD7BLCbP21w" base_Dependency="_Hb4LIKHmEfGhD7BLCbP21w" kindInHeader="inclusion" kindInImplementation="none"/>
-  <CppPropertySets:GeneralDependencyProperties xmi:id="_MIFbkKHmEfGhD7BLCbP21w" base_Dependency="_Kz2zkKHmEfGhD7BLCbP21w" kindInHeader="inclusion" kindInImplementation="none"/>
+  <CppPropertySets:GeneralDependencyProperties xmi:id="_MIFbkKHmEfGhD7BLCbP21w" base_Dependency="_Kz2zkKHmEfGhD7BLCbP21w" kindInHeader="none"/>
   <UMLRealTime:RTPort xmi:id="_0mjRoKHqEfGhD7BLCbP21w" isConjugate="true" base_Port="_0miDgKHqEfGhD7BLCbP21w"/>
   <UMLRealTime:RTPort xmi:id="_4ZW04KHqEfGhD7BLCbP21w" base_Port="_4ZWN0KHqEfGhD7BLCbP21w"/>
   <UMLRealTime:RTConnector xmi:id="_8bPV8KHqEfGhD7BLCbP21w" base_Connector="_8bOH0KHqEfGhD7BLCbP21w"/>
