@@ -243,14 +243,6 @@
                         </children>
                         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kwgFV5-BEfGhD7BLCbP21w"/>
                       </children>
-                      <children xmi:type="umlnotation:UMLShape" xmi:id="_kwgsYJ-BEfGhD7BLCbP21w" element="_SsDTUJ9_EfGhD7BLCbP21w" fontName="Segoe UI" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
-                        <children xmi:type="notation:DecorationNode" xmi:id="_kwgsYp-BEfGhD7BLCbP21w" type="NameLabel">
-                          <children xmi:type="notation:BasicDecorationNode" xmi:id="_kwgsZJ-BEfGhD7BLCbP21w" type="Stereotype"/>
-                          <children xmi:type="notation:BasicDecorationNode" xmi:id="_kwgsZZ-BEfGhD7BLCbP21w" type="Name"/>
-                          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kwgsY5-BEfGhD7BLCbP21w" y="-186"/>
-                        </children>
-                        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kwgsYZ-BEfGhD7BLCbP21w" x="1757" y="1640"/>
-                      </children>
                       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x7kqYp9_EfGhD7BLCbP21w" y="2115"/>
                     </children>
                     <children xmi:type="umlnotation:UMLShape" xmi:id="_x7l4gJ9_EfGhD7BLCbP21w" element="_jT4gUJyiEfGhD7BLCbP21w" fontName="Segoe UI" fontHeight="8" fillColor="9892502" transparency="0" lineColor="2343203" lineWidth="1" showStereotype="Label">
@@ -373,15 +365,6 @@
                   </children>
                   <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kwkWyJ-BEfGhD7BLCbP21w" points="[106, 33, -9461, 379]$[4699, 1454, -4868, 1800]$[8518, 41, -1049, 387]"/>
                 </edges>
-                <edges xmi:type="umlnotation:UMLConnector" xmi:id="_kwlk4J-BEfGhD7BLCbP21w" element="_SsKoEJ9_EfGhD7BLCbP21w" source="_kwgsYJ-BEfGhD7BLCbP21w" target="_kwVtQJ-BEfGhD7BLCbP21w" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" lineColor="8421504" lineWidth="1" showStereotype="Text">
-                  <children xmi:type="notation:DecorationNode" xmi:id="_kwlk4p-BEfGhD7BLCbP21w" type="TransitionLabelCompartment">
-                    <children xmi:type="notation:BasicDecorationNode" xmi:id="_kwlk5J-BEfGhD7BLCbP21w" type="Stereotype"/>
-                    <children xmi:type="notation:BasicDecorationNode" xmi:id="_kwlk5Z-BEfGhD7BLCbP21w" type="TransitionLabel"/>
-                    <children xmi:type="notation:ListCompartment" xmi:id="_kwlk5p-BEfGhD7BLCbP21w" type="Triggers"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kwlk45-BEfGhD7BLCbP21w" y="-186"/>
-                  </children>
-                  <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kwlk4Z-BEfGhD7BLCbP21w" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-                </edges>
                 <edges xmi:type="umlnotation:UMLConnector" xmi:id="_kwlk55-BEfGhD7BLCbP21w" element="_7n3boJ0xEfGhD7BLCbP21w" source="_x7nGoJ9_EfGhD7BLCbP21w" target="_x7l4gJ9_EfGhD7BLCbP21w" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" lineColor="8421504" lineWidth="1" showStereotype="Text">
                   <children xmi:type="notation:DecorationNode" xmi:id="_kwlk6Z-BEfGhD7BLCbP21w" type="TransitionLabelCompartment">
                     <children xmi:type="notation:BasicDecorationNode" xmi:id="_kwlk65-BEfGhD7BLCbP21w" type="Stereotype"/>
@@ -399,24 +382,6 @@
                     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kwmL85-BEfGhD7BLCbP21w" x="306" y="-283" width="1190" height="528"/>
                   </children>
                   <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kwmL8Z-BEfGhD7BLCbP21w" points="[-1058, 213, 4313, 186]$[-2646, 213, 2725, 186]$[-4313, 213, 1058, 186]"/>
-                </edges>
-                <edges xmi:type="umlnotation:UMLConnector" xmi:id="_pmbnkJ-DEfGhD7BLCbP21w" element="_pmZyYJ-DEfGhD7BLCbP21w" source="_x7nGoJ9_EfGhD7BLCbP21w" target="_kwVtQJ-BEfGhD7BLCbP21w" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" lineColor="8421504" lineWidth="1" showStereotype="Text">
-                  <children xmi:type="notation:DecorationNode" xmi:id="_pmbnkp-DEfGhD7BLCbP21w" type="TransitionLabelCompartment">
-                    <children xmi:type="notation:BasicDecorationNode" xmi:id="_pmbnlJ-DEfGhD7BLCbP21w" type="Stereotype"/>
-                    <children xmi:type="notation:BasicDecorationNode" xmi:id="_pmbnlZ-DEfGhD7BLCbP21w" type="TransitionLabel"/>
-                    <children xmi:type="notation:ListCompartment" xmi:id="_pmbnlp-DEfGhD7BLCbP21w" type="Triggers"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pmbnk5-DEfGhD7BLCbP21w" y="-186"/>
-                  </children>
-                  <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_pmbnkZ-DEfGhD7BLCbP21w" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-                </edges>
-                <edges xmi:type="umlnotation:UMLConnector" xmi:id="_tSFZ8J-DEfGhD7BLCbP21w" element="_tSDkwJ-DEfGhD7BLCbP21w" source="_x7l4gJ9_EfGhD7BLCbP21w" target="_kwVtQJ-BEfGhD7BLCbP21w" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" lineColor="8421504" lineWidth="1" showStereotype="Text">
-                  <children xmi:type="notation:DecorationNode" xmi:id="_tSGBAJ-DEfGhD7BLCbP21w" type="TransitionLabelCompartment">
-                    <children xmi:type="notation:BasicDecorationNode" xmi:id="_tSGBAp-DEfGhD7BLCbP21w" type="Stereotype"/>
-                    <children xmi:type="notation:BasicDecorationNode" xmi:id="_tSGBA5-DEfGhD7BLCbP21w" type="TransitionLabel"/>
-                    <children xmi:type="notation:ListCompartment" xmi:id="_tSGBBJ-DEfGhD7BLCbP21w" type="Triggers"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tSGBAZ-DEfGhD7BLCbP21w" y="-186"/>
-                  </children>
-                  <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tSFZ8Z-DEfGhD7BLCbP21w" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
                 </edges>
                 <edges xmi:type="umlnotation:UMLConnector" xmi:id="_WGkfUJ-0EfGhD7BLCbP21w" element="_WGjRMJ-0EfGhD7BLCbP21w" source="_NdIkUJ-0EfGhD7BLCbP21w" target="_x7kqYZ9_EfGhD7BLCbP21w" fontName="Segoe UI" fontHeight="8" roundedBendpointsRadius="4" lineColor="8421504" lineWidth="1" showStereotype="Text">
                   <children xmi:type="notation:DecorationNode" xmi:id="_WGkfUp-0EfGhD7BLCbP21w" type="TransitionLabelCompartment">
@@ -457,7 +422,6 @@
               <subvertex xmi:type="uml:State" xmi:id="_lmQoEJyhEfGhD7BLCbP21w" name="Red">
                 <connectionPoint xmi:id="_Zzp6cJ1WEfGhD7BLCbP21w" kind="entryPoint"/>
                 <connectionPoint xmi:id="_Zzp6cZ1WEfGhD7BLCbP21w" kind="exitPoint"/>
-                <connectionPoint xmi:id="_SsDTUJ9_EfGhD7BLCbP21w" kind="exitPoint"/>
                 <entry xmi:type="uml:OpaqueBehavior" xmi:id="_zftcMJ1GEfGhD7BLCbP21w" name="Entry">
                   <language><![CDATA[C++]]></language>
                   <body><![CDATA[onLightChanged();]]></body>
@@ -487,9 +451,6 @@
               <transition xmi:id="_wNsEUJyiEfGhD7BLCbP21w" name="goGreen" source="_Zzp6cZ1WEfGhD7BLCbP21w" target="_jT4gUJyiEfGhD7BLCbP21w">
                 <trigger xmi:id="_HU1ZEJ0yEfGhD7BLCbP21w" name="" event="_Ci4CwJ0uEfGhD7BLCbP21w" port="_H5RqQJ0vEfGhD7BLCbP21w"/>
               </transition>
-              <transition xmi:id="_SsKoEJ9_EfGhD7BLCbP21w" name="off" source="_SsDTUJ9_EfGhD7BLCbP21w" target="_x7nttZ9_EfGhD7BLCbP21w">
-                <trigger xmi:id="_lL0aQJ9_EfGhD7BLCbP21w" name="" event="_iorvIJ9_EfGhD7BLCbP21w" port="_H5RqQJ0vEfGhD7BLCbP21w"/>
-              </transition>
               <transition xmi:id="_1F3UMJyiEfGhD7BLCbP21w" name="goYellow" source="_jT4gUJyiEfGhD7BLCbP21w" target="_imbkcJyiEfGhD7BLCbP21w">
                 <trigger xmi:id="_FeHvEJ0yEfGhD7BLCbP21w" name="" event="_Di4HMJ0uEfGhD7BLCbP21w" port="_H5RqQJ0vEfGhD7BLCbP21w"/>
               </transition>
@@ -500,12 +461,6 @@
                 <trigger xmi:id="_BL99YJ0yEfGhD7BLCbP21w" name="" event="_Ci4CwJ0uEfGhD7BLCbP21w" port="_H5RqQJ0vEfGhD7BLCbP21w"/>
               </transition>
               <transition xmi:id="_x7nttJ9_EfGhD7BLCbP21w" kind="local" source="_x7nts59_EfGhD7BLCbP21w" target="_imbkcJyiEfGhD7BLCbP21w"/>
-              <transition xmi:id="_pmZyYJ-DEfGhD7BLCbP21w" name="off" source="_imbkcJyiEfGhD7BLCbP21w" target="_x7nttZ9_EfGhD7BLCbP21w">
-                <trigger xmi:id="_pmZyYZ-DEfGhD7BLCbP21w" name="" event="_iorvIJ9_EfGhD7BLCbP21w" port="_H5RqQJ0vEfGhD7BLCbP21w"/>
-              </transition>
-              <transition xmi:id="_tSDkwJ-DEfGhD7BLCbP21w" name="off" source="_jT4gUJyiEfGhD7BLCbP21w" target="_x7nttZ9_EfGhD7BLCbP21w">
-                <trigger xmi:id="_tSDkwZ-DEfGhD7BLCbP21w" name="" event="_iorvIJ9_EfGhD7BLCbP21w" port="_H5RqQJ0vEfGhD7BLCbP21w"/>
-              </transition>
               <transition xmi:id="_WGjRMJ-0EfGhD7BLCbP21w" name="red" kind="local" source="_Nc-zUJ-0EfGhD7BLCbP21w" target="_lmQoEJyhEfGhD7BLCbP21w"/>
               <transition xmi:id="_r74lwJ-0EfGhD7BLCbP21w" name="yellow" kind="local" source="_hP_DwJ-0EfGhD7BLCbP21w" target="_r71icJ-0EfGhD7BLCbP21w"/>
               <transition xmi:id="_twG8cJ-0EfGhD7BLCbP21w" name="green" kind="local" source="_mhRXMJ-0EfGhD7BLCbP21w" target="_twEgMJ-0EfGhD7BLCbP21w"/>
@@ -516,7 +471,9 @@
               <details xmi:id="_lmQoE5yhEfGhD7BLCbP21w" key="Initial"/>
             </eAnnotations>
           </transition>
-          <transition xmi:id="_x7nttp9_EfGhD7BLCbP21w" name="off" source="_x7nttZ9_EfGhD7BLCbP21w" target="_KmBAUJ9_EfGhD7BLCbP21w"/>
+          <transition xmi:id="_x7nttp9_EfGhD7BLCbP21w" name="off" source="_x7nttZ9_EfGhD7BLCbP21w" target="_KmBAUJ9_EfGhD7BLCbP21w">
+            <trigger xmi:id="_KRYmMKaoEfGK_-hlfUoEgw" event="_iorvIJ9_EfGhD7BLCbP21w" port="_H5RqQJ0vEfGhD7BLCbP21w"/>
+          </transition>
           <transition xmi:id="_NdES4J-0EfGhD7BLCbP21w" name="red" source="_KmBAUJ9_EfGhD7BLCbP21w" target="_Nc-zUJ-0EfGhD7BLCbP21w">
             <trigger xmi:id="_P8bRQJ-0EfGhD7BLCbP21w" name="" event="_Eh2Q4J0uEfGhD7BLCbP21w" port="_H5RqQJ0vEfGhD7BLCbP21w"/>
           </transition>

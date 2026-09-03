@@ -2231,6 +2231,9 @@ west.off().send();]]></body>
     <packagedElement xmi:type="uml:Artifact" xmi:id="_xb_B0KHkEfGhD7BLCbP21w" name="Utils" clientDependency="_yhbxgKHlEfGhD7BLCbP21w"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_6k01oKHkEfGhD7BLCbP21w" name="CmdLineArgs">
       <ownedAttribute xmi:id="_88yLgKHkEfGhD7BLCbP21w" name="nsLaneCount" visibility="public">
+        <eAnnotations xmi:id="_F0cKsKaxEfGK_-hlfUoEgw" source="com.hcl.xtools.properties">
+          <details xmi:id="_F0cKsaaxEfGK_-hlfUoEgw" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
+        </eAnnotations>
         <type xmi:type="uml:PrimitiveType" href="platform:/plugin/com.ibm.xtools.umldt.rt.cpp.core/libraries/CppPrimitiveDatatypes.emx#_WD1GgMq-Edyy44vjV83uOg?CppPrimitiveDatatypes/unsigned%20short?"/>
         <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_ON104KHrEfGhD7BLCbP21w">
           <type xmi:type="uml:PrimitiveType" href="platform:/plugin/com.ibm.xtools.umldt.rt.cpp.core/libraries/CppPrimitiveDatatypes.emx#_WD1GgMq-Edyy44vjV83uOg?CppPrimitiveDatatypes/unsigned%20short?"/>
@@ -2238,7 +2241,7 @@ west.off().send();]]></body>
       </ownedAttribute>
       <ownedAttribute xmi:id="_CUlOcKIYEfGhD7BLCbP21w" name="port" visibility="public">
         <eAnnotations xmi:id="_CUmckKIYEfGhD7BLCbP21w" source="com.hcl.xtools.properties">
-          <details xmi:id="_CUmckaIYEfGhD7BLCbP21w" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="equal"/>
+          <details xmi:id="_CUmckaIYEfGhD7BLCbP21w" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
         </eAnnotations>
         <type xmi:type="uml:PrimitiveType" href="platform:/plugin/com.ibm.xtools.umldt.rt.cpp.core/libraries/CppPrimitiveDatatypes.emx#_WD1GgMq-Edyy44vjV83uOg?CppPrimitiveDatatypes/unsigned%20short?"/>
         <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_D60McKIYEfGhD7BLCbP21w">
@@ -2247,7 +2250,7 @@ west.off().send();]]></body>
       </ownedAttribute>
       <ownedAttribute xmi:id="_HlzQcKIYEfGhD7BLCbP21w" name="remotePort" visibility="public">
         <eAnnotations xmi:id="_Hlz3gKIYEfGhD7BLCbP21w" source="com.hcl.xtools.properties">
-          <details xmi:id="_Hlz3gaIYEfGhD7BLCbP21w" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="equal"/>
+          <details xmi:id="_Hlz3gaIYEfGhD7BLCbP21w" key="cpp/initializerKind/org.eclipse.uml2.uml.Enumeration" value="brace"/>
         </eAnnotations>
         <type xmi:type="uml:PrimitiveType" href="platform:/plugin/com.ibm.xtools.umldt.rt.cpp.core/libraries/CppPrimitiveDatatypes.emx#_WD1GgMq-Edyy44vjV83uOg?CppPrimitiveDatatypes/unsigned%20short?"/>
         <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_I6nuUKIYEfGhD7BLCbP21w">
